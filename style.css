@@ -1,3 +1,5 @@
+/* Global Styles */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,20 +9,20 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: ;
+    color: #333;
     background-color: #f4f4f4;
 }
 
 a {
     text-decoration: none;
-    color: ;
+    color: #337ab7;
 }
 
 a:hover {
-    color: ;
+    color: #23527c;
 }
 
-
+/* Sidebar Styles */
 
 .sidebar {
     position: fixed;
@@ -28,7 +30,7 @@ a:hover {
     left: 0;
     width: 250px;
     height: 100vh;
-    background-color:white ;
+    background-color: #333;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -36,7 +38,7 @@ a:hover {
 }
 
 .sidebar a {
-    color:gray ;
+    color: #fff;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -45,14 +47,14 @@ a:hover {
 }
 
 .sidebar a.active {
-    background-color: ;
+    background-color: #337ab7;
 }
 
 .sidebar a:hover {
-    background-color: ;
+    background-color: #23527c;
 }
 
-
+/* Overlay Styles */
 
 .overlay {
     position: fixed;
@@ -64,7 +66,7 @@ a:hover {
     display: none;
 }
 
-
+/* Topbar Styles */
 
 .topbar {
     position: fixed;
@@ -72,7 +74,7 @@ a:hover {
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: ;
+    background-color: #333;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -88,15 +90,40 @@ a:hover {
 .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: ;
+    background-color: #fff;
     margin-bottom: 5px;
 }
 
 .logo {
-    color: ;
+    color: #fff;
     font-size: 18px;
     font-weight: bold;
 }
 
+/* Main Content Styles */
 
 main {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+main h1 {
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    main {
+        margin-left: 0;
+    }
+}
